@@ -981,35 +981,42 @@ nav a:hover::after {
 
 
 /* Community Section */
-.Community{
+.Community {
     position: relative;
     width: 80%;
+    height: auto;
     margin: auto;
-    box-sizing: bounding-box;
-    clear: both;
+    margin-top: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
 .Community .Newsletter-Sub form {
     position: relative;
     width: 50%;
     margin-right: 70px;
 }
+
 .Community .Newsletter-Sub p {
     font-size: 22px;
     margin-bottom: 15px;
 }
+
 .Community .Newsletter-Sub .Description {
     width: 50%;
     font-size: 14px;
     font-family: 'poppins';
 }
+
 .Community .Newsletter-Sub input {
     padding: 15px;
     width: 250px;
     border: 1px solid rgba(255, 255, 255, 0.363);
     border-radius: 7px;
     background-color: transparent;
-    margin-right: 10px;
+    margin-right: 15px;
 }
+
 .Community .Newsletter-Sub button {
     padding: 15px 25px;
     border: 0;
@@ -1021,33 +1028,39 @@ nav a:hover::after {
     font-size: 15px;
     cursor: pointer;
 }
+
 ::placeholder {
     color: rgba(255, 255, 255, 0.363);
 }
+
 .Community .Newsletter-Sub button:hover {
     background-color: rgba(255, 255, 255, 0.598);
 }
+
 .Community .SM-Links::before {
     content: '';
+    position: absolute;
     background-color: rgba(255, 255, 255, 0.27);
     height: 150px;
     width: 1px;
     border: 0;
     top: 0px;
     left: -120px;
-    position: absolute;
 }
+
 .Community .SM-Links {
     position: relative;
     display: block;
-    bottom: 140px;
-    margin-right: 350px;
+    bottom: 120px;
+    margin-right: 150px;
     float: right;
 }
+
 .Community .SM-Links p {
     font-size: 20px;
     padding-bottom: 20px;
 }
+
 .Community .SM-Links img {
     width: 20px;
     height: 20px;
@@ -1057,30 +1070,35 @@ nav a:hover::after {
     background-color: rgba(255, 255, 255, 0.234);
     border-radius: 6px;
 }
+
 .Community .SM-Links a {
     width: 40px;
     animation: all 2s ease-in-out;
 }
+
 .Community .SM-Links i {
     display: flex;
     padding-top: 7px;
     justify-content: center;
     color: #ffffff;
 }
+
 .Community .SM-Links img:hover {
     background-color: rgba(255, 255, 255, 0.56);
     scale: 110%;
 }
 
-/* Community Section Media Queries */
+/*? Community Section Media Queries */
+
 @media screen and (max-width:1440px) {
     .Community .Newsletter-Sub form {
         position: relative;
         clear: both;
+        width: 50%;
     }
 
     .Community .Newsletter-Sub input {
-        width: 80%;
+        width: 50%;
         border: 1px solid rgba(255, 255, 255, 0.363);
         margin-bottom: 15px;
         border-radius: 7px;
@@ -1089,7 +1107,7 @@ nav a:hover::after {
     }
 
     .Community .SM-Links {
-        position: absolute;
+        position: relative;
         top: 80px;
         right: 50px;
         margin-right: 0;
@@ -1105,6 +1123,51 @@ nav a:hover::after {
     .Community .SM-Links img {
         width: 15px;
         height: 15px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .Community .Newsletter-Sub form {
+        position: relative;
+        clear: both;
+        width: 100%;
+    }
+
+    .Community .Newsletter-Sub input {
+        width: 35%;
+    }
+
+    .Community .SM-Links {
+        /* background-color: pink; */
+        position: relative;
+        display: flex;
+        top: 0px;
+        right: 0;
+        transform: translateX(-32%);
+        margin-top: 40px;
+        clear: both;
+    }
+
+    .Community .SM-Links img {
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+    }
+
+    .Community .SM-Links a {
+        padding-right: 20px;
+    }
+
+    .Community .Newsletter-Sub .Description {
+        width: 100%;
+    }
+
+    .Community .SM-Links::before {
+        content: '';
+        display: none;
+        height: 250px;
+        left: -40px;
+        top: -50px;
     }
 }
 
