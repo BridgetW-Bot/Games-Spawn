@@ -1,0 +1,1269 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    background-color: rgb(32, 0, 60);
+}
+
+.Navbar {
+    background-color: rgba(23, 0, 44, 255);
+    width: 100%;
+    margin: auto;
+    padding-right: 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    position: fixed;
+    z-index: 100;
+    clear: both;
+}
+
+.Navbar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.Icon {
+    width: 95px;
+    float: left;
+    padding: 20px 80px 20px 250px;
+    cursor: pointer;
+}
+
+.Search-Bar-Container {
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-width: 100px;
+    margin-top: 25px;
+    float: left;
+    max-width: 700px;
+}
+
+.Search-Bar {
+    padding: 0px 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.372);
+    border-radius: 30px;
+    display: flex;
+}
+
+.Search-Bar input {
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    border: 0;
+    outline: none;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.593);
+    font-size: .8rem;
+    font-family: 'poppins';
+}
+
+.Search-Bar button .fa-search {
+    width: 5px;
+    opacity: .4;
+
+}
+
+.Search-Bar button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 40px;
+    margin-top: 31px;
+    position: relative;
+}
+
+nav {
+    float: right;
+    position: relative;
+    margin-right: 200px;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'poppins';
+    font-size: 14px;
+}
+
+.Submenu {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+.Submenu li {
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.Navbar ul li:hover .Submenu {
+    display: block;
+    position: absolute;
+    width: 250%;
+    background-color: rgba(23, 0, 44, 255);
+}
+
+.XR-Submenu {
+    display: none;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.XR-Submenu li {
+    margin-left: 20px;
+}
+
+/* Fix XR Submenu option */
+.XR-Hover:hover .XR-Submenu {
+    display: list-item;
+    position: absolute;
+    width: 150%;
+    background-color: rgba(23, 0, 44, 255);
+    top: -20px;
+    ;
+    left: 100px;
+    /* margin-top:-40px; */
+    /* margin-left:120px; */
+    padding-bottom: 20px;
+}
+
+.Navbar .fa {
+    margin-right: 8px;
+}
+
+.Navbar .fa:hover {
+    columns: aqua;
+}
+
+.Navbar a:active,
+.Navbar a:hover {
+    color: aqua
+}
+
+nav a::after {
+    content: '';
+    z-index: 3;
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* NavBar Media Queries */
+@media screen and (max-width:1440px) {
+    .Icon {
+        width: 95px;
+        float: left;
+        padding: 20px 80px 20px 150px;
+        cursor: pointer;
+    }
+
+    .Search-Bar-Container {
+        min-height: 30px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 25px;
+        float: left;
+        max-width: 150px;
+    }
+
+    .Search-Bar {
+        position: relative;
+        padding: 0px 10px;
+        width: 100%;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.372);
+        border-radius: 30px;
+    }
+
+    .Search-Bar input {
+        background: transparent;
+        border: none;
+        padding: 5px 10px;
+        border: 0;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgba(0, 0, 0, 0.593);
+        font-size: .7rem;
+        font-family: 'poppins';
+    }
+
+    .Search-Bar button .fa-search {
+        position: absolute;
+        width: 5px;
+        opacity: .4;
+        right: 10px;
+        top: 8px;
+    }
+
+    .Search-Bar button {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        left: 0;
+    }
+
+    nav {
+        float: right;
+        position: relative;
+        margin-right: 120px;
+    }
+}
+
+/* News Section */
+.Heading-News-Container{
+    width: 100%;
+    height: 680px;
+    margin:auto;
+    position:relative;
+    top:80px;
+    display: flex;
+    box-sizing:border-box;
+    margin-bottom:200px;
+    background-image: url(../Images/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.Top-News{
+    position: relative;
+    width: 80%;
+    height: 600px;
+    padding:40px;  
+    margin: auto;
+    /* background-color: red; */
+    overflow: hidden;
+}
+.Heading-News-Container::before{
+    content:'';
+        background-image: linear-gradient(to bottom, rgba(32, 0, 60, 0.545), rgb(32, 0, 60)90%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.Main-News{
+    float: left;
+    margin-right:15px;
+}
+.Heading-News-Container .Main-News img{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 550px;
+    height: 300px;
+    object-fit: cover;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+.Heading-News-Container .Main-News h3{
+    width: 550px;
+    font-weight:600;
+    font-size:20px;
+    padding-bottom:10px;
+    word-wrap: break-word;
+    clear: both;
+    position: relative;
+    animation:all 4s ease-in-out;
+}
+.Heading-News-Container .Main-News h3:hover{
+    color: #a5a5a5;
+}
+.Heading-News-Container .Main-News .Description{
+    margin-bottom:20px;
+    width:550px;
+    opacity: .6;
+    font-size:12px;
+    font-family: 'poppins';
+}
+.Heading-News-Container .Main-News .Image-Preview{
+    display: block;
+    position: absolute;
+    margin-right:20px;
+    box-sizing: border-box;
+}
+.Heading-News-Container .Main-News .Image-Preview img{
+    display: block;
+    float: left;
+    width:25%;
+    height: 100px;
+    object-fit:cover;
+    border-radius:5px;
+}
+.Heading-News-Container .Main-News .Image-Preview img:not(:first-child){
+    margin-left: 10px;
+}
+.Heading-News-Container .Footer{
+    display:flex;
+    position: relative;
+    clear: both;
+}
+.Heading-News-Container .Footer p{
+    font-size:12px;
+    font-style: italic;
+    color:rgba(255, 255, 255, 0.37);
+    margin-bottom:15px;
+}
+.Heading-News-Container .Footer .Publisher::after{
+    content:'';
+    width: 1px;
+    height: 50%;
+    margin-left:15px;
+    background-color: rgba(255, 255, 255, 0.37);
+    border:0;
+    position: absolute;
+}
+.Heading-News-Container .Footer .Date{
+    position: absolute;
+    left:95px;
+    margin-left: 10px;
+}
+.Top-News .Main-News a{
+    position: absolute;
+    bottom: 0;
+    clear: both;
+    display: inline;
+    color: rgb(244, 255, 173);
+    text-decoration-line: underline;
+    font-size:12px;
+}
+
+/* Main Center News Section */
+.Center-News-Container{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    float: left;
+    width: 600px;
+    height: auto;
+    left:20px;
+}
+.Center-News-Container::before{
+    content:'';
+    width: .5px;
+    border:0;
+    height: 620px;
+    background-color:white;
+    position: absolute;
+    clear: both;
+    opacity: .5;
+    margin-left:25px;
+    left:-20px;
+}
+.Center-News-Container::after{
+    content:'';
+    width: .5px;
+    border:0;
+    height: 620px;
+    background-color:white;
+    position: absolute;
+    clear: both;
+    opacity: .5;
+    margin-left:25px;
+    right:15px;
+}
+.Center-News-Container .Title-Section{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    align-items: center;
+}
+.Center-News-Container .Title-Section .Title{
+    position: relative;
+    margin-bottom:20px;
+    font-size:18px;
+    text-transform:Uppercase;
+    letter-spacing: 1px;
+    margin-left: 50px;
+    float: left;
+}
+.Center-News-Container i{
+    position: absolute;
+    left:175px;
+    top: 3px;
+    scale: 80%;
+    cursor: pointer;
+}
+.Center-News-Container .Center-News .News{
+    margin-left: 50px;
+    clear: both;
+    position: relative;
+    display: block;
+    padding-bottom: 40px;
+}
+.Center-News .News img{
+    position: relative;
+    width: 40%;
+    height: 160px;
+    object-fit:cover;
+    border-radius:7px;
+}
+.Center-News .News .Heading{
+    font-weight:600;
+    font-size:16px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+.Center-News .News .Copy{
+    position: relative;
+    width: 55%;
+    float:right;
+    font-size:14px;
+    line-height: 25px;
+    padding-left:10px;
+}
+.Center-News .News .Description{
+    opacity:.6;
+    font-family:'poppins';
+    font-size:12px;
+    width: 250px;
+}
+.Center-News .News a {
+    float: left;
+    color: rgb(244, 255, 173);
+    text-decoration-line: underline;
+    font-size: 12px;
+}
+
+/* Most Read Section */
+.Most-Read{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 300px;
+    height: 600px;
+    float: left;
+    margin-left:50px;
+    border-top:10px solid rgb(0, 0, 0);
+    overflow-x: hidden;
+    background-image: url(../Images/Star-Citizen-Wallpaper-02.jpg);
+    background-size: cover;
+}
+.Most-Read-Container{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.574)30%, rgba(32, 0, 60, 0.869)80%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .5);
+    padding: 20px;
+}
+.Most-Read::-webkit-scrollbar {
+    width: 5px;
+}
+.Most-Read::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.Most-Read::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.Most-Read::-webkit-scrollbar-thumb:hover {
+    background: #a5a5a5;
+}
+.Most-Read-Container img{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    object-fit:cover;
+    border-radius:5px;
+    float:right;
+}
+.Most-Read-Container .News{
+    position: relative;
+    margin-bottom:60px;
+    clear: both;
+}
+.Most-Read .Title-Section {
+    display:block;
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    top:0;
+    position: sticky;
+    z-index: 20;
+    padding:5px 20px;
+}
+/* .Most-Read .Title-Section::after{
+    content: '';
+    width: 40%;
+    height: 1px;
+    position: absolute;
+    background-color: white;
+    bottom: 10px;
+} */
+.Most-Read .Title {
+    font-weight: 400;
+    font-size: 18px;
+    width: 80%;
+    text-transform:uppercase;
+}
+.Most-Read i {
+    position: absolute;
+    left:125px;
+    top: 8px;
+    cursor: pointer;
+    scale:80%;
+}
+.Most-Read-Container .Description{
+    position: relative;
+    font-size:12px;
+    width: 200px;
+    line-height: 20px;
+    padding-bottom:5px;
+}
+.Most-Read-Container a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-decoration-line: underline;
+    font-size: 10px;
+}
+
+/* Section 2 News */
+.Section2-Container{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    column-gap:30px;
+    row-gap:55px;
+    box-sizing: border-box;
+    clear: both;
+    width: 80%;
+    margin:auto;
+    height: auto;
+    margin-bottom: 120px;
+}
+.Section2-Container img{
+    width: 355px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit:cover;
+}
+
+.Section2-Container .Title{
+    width: 350px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Section2-Container .Description{
+    font-style:italic;
+    font-size: 12px;
+    opacity: .6;
+}
+
+/* Section 3 News */
+.Section3-Container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 55px;
+    box-sizing: border-box;
+    clear: both;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    margin-bottom: 60px;
+    /* border: 2px solid white; */
+}
+.Section3-Container .Main-News .News{
+    margin-bottom:50px;
+}
+.Section3-Container .Main-News img{
+    width: 650px;
+    height: 350px;
+    object-fit:cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.Section3-Container .Main-News .Description{
+    width: 650px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+.Section3-Container .Main-News .Title{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size:18px;
+    cursor: pointer;
+}
+.Section3-Container .Main-News .Publisher{
+    font-size:12px;
+    font-style: italic;
+    color:grey;
+}
+/* Ratings Section */
+.Section3-Container .Ratings-Section{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 750px;
+    height: 1000px;
+    margin-left: 70px;
+    border-top: 10px solid rgb(0, 0, 0);
+    overflow-x: hidden;
+    background-image: url(../Images/milad-fakurian-bexwsdM5BCw-unsplash.jpg);
+    background-size: cover;
+}
+.Section3-Container .Ratings-Section .Title-Section {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    position: sticky;
+    padding: 5px 20px 10px 40px;
+    z-index: 50;
+}
+.Section3-Container .Ratings-Section .Title {
+    font-weight: 400;
+    font-size: 18px;
+    width: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Weekly Rates */
+.Section3-Container .Ratings-Section .Rates {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.574)30%, rgba(32, 0, 60, 0.869)80%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .5);
+    width: 100%;
+    height: auto;
+}
+.Ratings-Section .Rates{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+.Section3-Container .Ratings-Section::-webkit-scrollbar {
+    width: 5px;
+}
+.Section3-Container .Ratings-Section::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.Section3-Container .Ratings-Section::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.Section3-Container .Ratings-Section::-webkit-scrollbar-thumb:hover {
+    background: #a5a5a5;
+}
+.Section3-Container .Rates .Heading{
+    width: 90%;
+    height: 70px;
+    margin: auto;
+    /* border:2px solid white; */
+    padding-top:10px;
+    padding-bottom:40px;
+}
+.Section3-Container .Rates .Heading::after{
+    content:'';
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    margin: 0;
+    top:100px; left:40px; right:0; bottom:0;
+    margin-bottom: 20px;
+    position: absolute;
+    opacity: .4;
+}
+.Section3-Container .Rates .Description{
+    padding-top:10px;
+    position: relative;
+    display:block;
+    box-sizing: border-box;
+    float:left;
+}
+.Section3-Container .Rates .Description p{
+    font-size:12px;
+}
+.Ratings-Section .Rates .Filter-tag{
+    position: absolute;
+    right: 195px;
+    top: 15px;
+    padding-bottom:5px;
+    font-size:14px;
+}
+.Ratings-Section .Filter .Dropdown{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    background-color:rgba(255, 255, 255, 0.242);
+    margin-top:20px;
+    margin-left:20px;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 30px;
+    border:1px solid rgba(255, 255, 255, 0.083);
+    outline: none;
+    border-radius:5px;
+}
+.Ratings-Section .Rates .Dropdown option{
+    color:black;
+}
+
+/* Rates Table Section */
+.Ratings-Section .Rates table{
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    /* border:2px solid white; */
+    margin:auto;
+    box-sizing:border-box;
+    width: 90%;
+    background-color: rgba(234, 201, 255, 0.128);
+    overflow-x: hidden;
+}
+.Section3-Container .Rates thead::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: rgb(234, 255, 1);
+    margin: 0;
+    top: 70px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    opacity: .4;
+}
+.Section3-Container .Rates tbody tr{
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 0, 0.31);
+}
+.Ratings-Section .Rates table .Rank{
+    position: relative;
+    padding-left: 20px;
+}
+.Ratings-Section .Rates table .Rank p{
+    position: absolute;
+    box-sizing: border-box;
+    left: 33px;
+    top:40px;
+    font-size: 26px;
+    font-weight:500;
+    color:yellow;
+}
+.Ratings-Section .Rates table tbody, .ATW, .GS-Rate, .Your-Rate, .Name{
+    box-sizing: border-box;
+    position: relative;
+}
+.Ratings-Section .Rates table img{
+    height: 70px;
+    width: 50px;
+    object-fit: cover;
+    float: left;
+    padding-right:20px;
+    display: flex;
+}
+.Ratings-Section .Rates table, tr, th, td{
+    text-align: left;
+    padding:10px;
+    padding-right:20px;
+    /* border: 1px solid white; */
+    border-collapse: collapse;
+}
+.Ratings-Section .Rates .Rank{
+    width: 7%;
+}
+.Ratings-Section .Rates .Name{
+    width: 55%;
+}
+.Ratings-Section .Rates .Name p{
+    position:absolute;
+    left:80px;
+    top:40px;
+    color: rgb(255, 255, 255);
+}
+.Ratings-Section .Rates .Name a:visited{
+    color:pink;
+}
+.Ratings-Section .Rates .ATW{
+    width: 7%;
+}
+.Ratings-Section .Rates .GS-Rate i{
+    position: absolute;
+    top:40px;
+    left:10px;
+    color:gold;
+    scale:130%;
+}
+.Ratings-Section .Rates .GS-Rate p{
+    margin-left:40px;
+}
+.Ratings-Section .Rates .GS-Rate{
+    width: 10%;
+}
+.Ratings-Section .Rates .ATW{
+    width: 10%;
+}
+.Ratings-Section .Rates .Your-Rate{
+    width: 7%;
+}
+.Ratings-Section .Rates .Your-Rate i{
+    position:absolute;
+    top: 40px;
+    left:36px;
+    color: gold;
+    scale: 130%;
+}
+.Ratings-Section .Rates .ATW i{
+    position: absolute;
+    top:40px;
+    left:18px;
+    top:35px;
+    scale: 130%;
+    color: grey;
+}
+.Ratings-Section .Rates .ATW i:active{
+    color:gold;
+}
+
+/* Section 4 News */
+.S4-Header{
+    clear: both;
+    position: relative;
+    margin-left:180px;
+    margin-bottom:30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.Section4-Container{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom:100px;
+    background-color: rgba(255, 255, 255, 0.049);
+    padding: 60px 20px 60px 30px;
+}
+
+.Section4-Container .Side-News{
+    display: flex;
+    flex-direction:column;
+    gap:40px;
+    position: relative;
+    margin-right:30px;
+    /* border:1px solid white; */
+}
+.Section4-Container .Side-News::after{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    opacity: .4;
+}
+
+.Section4-Container .Side-News img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    float: left;
+    padding-right:30px;
+}
+.Section4-Container .Side-News .Title{
+    margin-right:20px;
+    font-size:18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.Section4-Container .Publisher{
+    font-size: 12px;
+    font-style: italic;
+    color: grey;
+    width: 80%;
+}
+.Section4-Container .Main-News{
+    position: relative;
+}
+.Section4-Container .Main-News::before{
+    content:'';
+    height: 100%;
+    position: absolute;
+    bottom:0; left:0; right:0;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(25, 0, 36));
+    z-index: 0;
+}
+.Section4-Container .Main-News .Featured{
+    position: absolute;
+    background-color: red;
+    border-top-left-radius:10px;
+    padding: 5px 20px;
+    font-size: 12px;
+}
+.Section4-Container .Main-News img{
+    width: 900px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.Section4-Container .Main-News .Copy{
+    padding:20px;
+    position: absolute;
+    bottom:10px;
+    color: white;
+}
+.Section4-Container .Main-News .Title{
+    font-size:22px;
+    font-weight: 600;
+    padding-bottom:10px;
+}
+.Section4-Container .Main-News .Description{
+    width: 75%;
+    font-size:12px;
+    padding-bottom:10px;
+}
+.Section4-Container .Main-News .Publisher{
+    font-size:12px;
+    font-style: italic;
+    color:grey;
+}
+
+
+
+
+
+
+
+
+/* Community Section */
+.Community{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    box-sizing: bounding-box;
+    clear: both;
+}
+.Community .Newsletter-Sub form {
+    position: relative;
+    width: 50%;
+    margin-right: 70px;
+}
+.Community .Newsletter-Sub p {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.Community .Newsletter-Sub .Description {
+    width: 50%;
+    font-size: 14px;
+    font-family: 'poppins';
+}
+.Community .Newsletter-Sub input {
+    padding: 15px;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    border-radius: 7px;
+    background-color: transparent;
+    margin-right: 10px;
+}
+.Community .Newsletter-Sub button {
+    padding: 15px 25px;
+    border: 0;
+    outline: 0;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.375);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.363);
+}
+.Community .Newsletter-Sub button:hover {
+    background-color: rgba(255, 255, 255, 0.598);
+}
+.Community .SM-Links::before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.27);
+    height: 150px;
+    width: 1px;
+    border: 0;
+    top: 0px;
+    left: -120px;
+    position: absolute;
+}
+.Community .SM-Links {
+    position: relative;
+    display: block;
+    bottom: 140px;
+    margin-right: 350px;
+    float: right;
+}
+.Community .SM-Links p {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.Community .SM-Links img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.234);
+    border-radius: 6px;
+}
+.Community .SM-Links a {
+    width: 40px;
+    animation: all 2s ease-in-out;
+}
+.Community .SM-Links i {
+    display: flex;
+    padding-top: 7px;
+    justify-content: center;
+    color: #ffffff;
+}
+.Community .SM-Links img:hover {
+    background-color: rgba(255, 255, 255, 0.56);
+    scale: 110%;
+}
+
+/* Community Section Media Queries */
+@media screen and (max-width:1440px) {
+    .Community .Newsletter-Sub form {
+        position: relative;
+        clear: both;
+    }
+
+    .Community .Newsletter-Sub input {
+        width: 80%;
+        border: 1px solid rgba(255, 255, 255, 0.363);
+        margin-bottom: 15px;
+        border-radius: 7px;
+        background-color: transparent;
+        margin-right: 15px;
+    }
+
+    .Community .SM-Links {
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        margin-right: 0;
+    }
+
+    .Community .SM-Links::before {
+        content: '';
+        height: 250px;
+        left: -80px;
+        top: -50px;
+    }
+
+    .Community .SM-Links img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Footer Section */
+footer {
+    position: relative;
+    clear: both;
+    background-color: rgba(0, 0, 0, 0.269);
+    width: 100%;
+    /* height: 500px; */
+    margin: auto;
+    margin-top: 70px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    position:sticky;
+}
+
+footer .Left-Items {
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+    display: block;
+    padding: 70px 0px 60px 200px;
+}
+
+footer .About-Us img {
+    width: 8%;
+    margin-bottom: 20px;
+}
+
+footer .About-Us p {
+    width: 30%;
+    font-family: 'poppins';
+    font-size: 14px;
+}
+
+footer .Links {
+    display: flex;
+    float: right;
+    margin-top: 70px;
+    margin-right: 270px;
+}
+
+footer .Links ul {
+    position: relative;
+    padding-left: 150px;
+    text-decoration: none;
+}
+
+footer .Links ul p {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'poppins';
+    font-size: 16px;
+    letter-spacing: .5px;
+}
+
+footer .Links ul li a {
+    cursor: pointer;
+}
+
+footer .Links .Col1 ul li:hover {
+    scale: 105%;
+}
+
+/* footer .Col1::after{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:-40px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    width: 1px;
+    border:0;
+    opacity:.6;
+}
+footer .Col2::after{
+    content:'';
+    position: absolute;
+    top:0px;
+    right:-50px;
+    height: 100%;
+    width: 1px;
+    background-color:rgb(255, 255, 255);
+    border:0;
+    opacity: .6;
+} */
+footer .Links ul li,
+a {
+    font-family: 'poppins';
+    text-decoration: none;
+    font-size: 14px;
+    list-style: none;
+    padding-bottom: 15px;
+    font-weight: 300;
+}
+
+footer .Disclaimer::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    width: 80%;
+    border-style: solid;
+    border: 0;
+    opacity: .6;
+    top: -30px;
+    left: 190px;
+}
+
+footer .Disclaimer {
+    /* clear: both; */
+    position: relative;
+    margin-right: 260px;
+    padding-bottom: 30px;
+    width: 25%;
+    padding-left: 200px;
+    font-size: 12px;
+    opacity: .6;
+    font-family: 'poppins';
+}
+
+footer .Copyright {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    margin-left: 200px;
+}
+
+footer .Copyright p {
+    font-family: 'poppins';
+    font-size: 12px;
+    font-weight: 300;
+}
+
+/* Footer Media Queries */
+@media screen and (max-width:1440px) {
+    footer .Links {
+        margin-right: 150px;
+    }
+
+    footer .Left-Items {
+        padding-left: 150px;
+    }
+
+    footer .Links ul {
+        padding-left: 50px;
+    }
+
+    footer .Disclaimer {
+        padding-left: 150px;
+    }
+
+    footer .Disclaimer::before {
+        left: 150px;
+    }
+
+    footer .Copyright {
+        margin-left: 150px;
+    }
+}
