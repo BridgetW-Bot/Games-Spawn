@@ -1127,6 +1127,11 @@ nav a:hover::after {
 }
 
 @media screen and (max-width:1024px) {
+    .Community .SM-Links p {
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
     .Community .Newsletter-Sub form {
         position: relative;
         clear: both;
@@ -1177,7 +1182,7 @@ footer {
     clear: both;
     background-color: rgba(0, 0, 0, 0.269);
     width: 100%;
-    /* height: 500px; */
+    height: 530px;
     margin: auto;
     margin-top: 70px;
     box-sizing: border-box;
@@ -1328,5 +1333,47 @@ footer .Copyright p {
 
     footer .Copyright {
         margin-left: 150px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    footer .Left-Items {
+    padding-left: 80px;
+    transform: translateY(50px);
+    }
+
+    footer .About-Us p {
+    width: 30%;
+    font-size: 12px;
+    }
+
+    footer .Links ul {
+    padding-left: 60px;
+    }
+
+    footer .Links ul li,
+    a {
+    font-size: 12px;
+    }
+
+    footer .Disclaimer {
+    clear: both;
+    padding-left: 0px;
+    padding-bottom: 30px;
+    width: 85%;
+    margin: auto;
+    transform: translateY(50px);
+    }
+
+    footer .Disclaimer::before {
+    left: 0px;
+    top: -20px;
+    width: 100%;
+    }
+
+    footer .Copyright {
+    justify-content: center;
+    margin-left: 0px;
+    transform: translateY(40px);
     }
 }

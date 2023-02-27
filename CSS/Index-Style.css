@@ -157,9 +157,7 @@ nav a:hover::after{
 @media screen and (max-width:1440px){
     .Icon {
     width: 95px;
-    float: left;
     padding: 20px 80px 20px 150px;
-    cursor: pointer;
     }
 
     .Search-Bar-Container {
@@ -218,6 +216,9 @@ nav a:hover::after{
 }
 
 @media screen and (max-width:1024px) {
+    .Navbar{
+    margin-bottom: 0px;
+    }
     .Icon {
     width: 85px;
     float: left;
@@ -244,7 +245,6 @@ nav a:hover::after{
     }
 
     .Navbar {
-    /* background-color: pink; */
     padding-right: 0px;
     position: relative;
     }
@@ -256,7 +256,7 @@ nav a:hover::after{
     top: 40px;
     right: 90px;
     transform-origin: top center;
-    animation: showMenu 0.5s ease-in-out forwards;
+    animation: showMenu 0.5ms ease-in-out forwards;
     }
 
     :is(.Navbar:hover, .Navbar:focus-within)
@@ -402,12 +402,48 @@ nav a:hover::after{
     }
 }
 
+@media screen and (max-width:768px) {
+    .Navbar{
+    margin-bottom:0px;
+    }
 
+    .Icon {
+    width: 95px;
+    padding-left:70px;
+    }
 
+    nav {
+    float: right;
+    position: relative;
+    margin-right: 120px;
+    }
 
+    .Menu-Icon,  .Menu-Icon::before,  .Menu-Icon::after {
+    transform: translate-X(-30px);
+    right: 70px;
+    top: 35px;
+    }
 
+    .Menu-Icon::before {
+    content: '';
+    transform: translate(70px, -45px);
+    transition: .5s ease-in;
+    }
 
+    .Menu-Icon::after {
+    content: '';
+    transform: translate(70px, -25px);
+    transition: .5s ease-in;
+    }
 
+    :is(.Navbar:hover, .Navbar:focus-within) .Menu-Icon::before {
+    transform: translate(70px, -35px) rotate(45deg);
+    }
+
+    :is(.Navbar:hover, .Navbar:focus-within) .Menu-Icon::after {
+    transform: translate(70px, -35px) rotate(-45deg);
+    }
+}
 
 /* Hero Section Styling */
 .Hero-Section{
@@ -586,6 +622,47 @@ nav a:hover::after{
     top: 300px;
     right: 250px;
     rotate: -20deg;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Hero-Section{
+        width: 85%;
+    }
+    .Hero-Copy {
+    width: 300px;
+    top: 80px;
+    left: 40px;
+    }
+
+    .Hero-Copy p {
+    font-size: 14px;
+    }
+
+    #Header-Copy {
+    font-size: 36px;
+    }
+
+    .Pad {
+    width: 300px;
+    margin-top: 170px;
+    }
+
+    .Plus-Icon-1 {
+    width: 60px;
+    top: 320px;
+    right: 350px;
+    }
+
+    .Plus-Icon-2 {
+    width: 60px;
+    top: 130px;
+    left:550px;
+    }
+
+    .Play-Button {
+    top: 50px;
+    right: 160px;
     }
 }
 
@@ -1410,7 +1487,6 @@ nav a:hover::after{
     }
 
     .Community .SM-Links {
-    /* background-color: pink; */
     position: relative;
     display: flex;
     top: 0px;
@@ -1420,6 +1496,11 @@ nav a:hover::after{
     clear: both;
     }
 
+    .Community .SM-Links p {
+    padding-bottom: 0px;
+    padding-top: 5px;
+    }
+    
     .Community .SM-Links img {
     width: 20px;
     height: 20px;
@@ -1437,9 +1518,6 @@ nav a:hover::after{
     .Community .SM-Links::before {
     content: '';
     display: none;
-    height: 250px;
-    left: -40px;
-    top: -50px;
     }
 }
 
@@ -1449,7 +1527,7 @@ footer{
     clear: both;
     background-color:rgba(0, 0, 0, 0.269);
     width: 100%;
-    /* height: 500px; */
+    height: 500px;
     margin: auto;
     margin-top: 70px;
     box-sizing:border-box;
@@ -1563,12 +1641,20 @@ footer .Copyright p{
 
 /* Footer Media Queries */
 @media screen and (max-width:1440px) {
+    footer{
+    margin-top: 30px;
+    }
     footer .Links{
         margin-right:150px;
     }
 
     footer .Left-Items{
     padding-left:150px;
+    }
+
+    footer .Links {
+    margin-top:50px;
+    margin-right:100px;
     }
 
     footer .Links ul{
@@ -1585,5 +1671,46 @@ footer .Copyright p{
 
     footer .Copyright{
     margin-left:150px;
+    }
+}
+
+@media screen and (max-width:1440px){
+    footer .Left-Items {
+    padding-left: 80px;
+    transform: translateY(50px);
+    }
+
+    footer .About-Us p {
+    width: 30%;
+    font-size: 12px;
+    }
+
+    footer .Links ul {
+    padding-left: 60px;
+    }
+
+    footer .Links ul li, a {
+    font-size: 12px;
+    }
+
+    footer .Disclaimer {
+    clear: both;
+    padding-left: 0px;
+    padding-bottom: 30px;
+    width: 85%;
+    margin:auto;
+    transform: translateY(50px);
+    }
+
+    footer .Disclaimer::before {
+    left: 0px;
+    top:-20px;
+    width: 100%;
+    }
+
+    footer .Copyright {
+    justify-content: center;
+    margin-left: 0px;
+    transform: translateY(40px);
     }
 }
